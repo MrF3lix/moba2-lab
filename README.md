@@ -1,2 +1,1 @@
-# moba2-lab
-Mobile Applications 2
+# Mobile Applications 2 Labs
