@@ -1,0 +1,9 @@
+.traffic-light {
+    box-sizing: border-box;
+    width: 70px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
