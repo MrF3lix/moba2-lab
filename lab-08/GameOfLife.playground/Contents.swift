@@ -55,7 +55,7 @@ func evaluateBoard(board: [[Int]]) -> [[Int]] {
 
     return newBoard.map({ cell in
         cell.map { value in
-            if value == 2 ||  value == 3 {
+            if value == 2 || value == 3 {
                 return 1
             }
             return 0
