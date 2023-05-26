@@ -19,6 +19,7 @@ struct EntityDetailView: View {
                         .font(.title)
                     Text(album.releaseDate.year())
                 }
+                .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
                 AsyncImage(url: album.artworkUrl100, scale: 0.5)
                 VStack {
