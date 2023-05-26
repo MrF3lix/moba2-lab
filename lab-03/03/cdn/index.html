@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ionic CDN</title>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <script type="module">
+      const items = [
+        "Pokémon Yellow",
+        "Mega Man X",
+        "The Legend of Zelda",
+        "Pac-Man",
+        "Super Mario World",
+      ];
+
+      document.getElementById("find").addEventListener("click", () => {
+        console.log("hello");
+        renderList();
+      });
+
+      const renderList = () => {
+        const searchValue = document.getElementById("search").value || '';
+        document.getElementById("list").innerHTML = items
+          .filter((x) => x.includes(searchValue))
+          .map((item) => `<ion-item><ion-label>${item}</ion-label></ion-item>`);
+      };
+
+      renderList();
+    </script>
+  </head>
+  <body>
+    <ion-item>
+      <ion-label>
+        <h1>Ionic installed using CDN</h1>
+        <p>This page showcases Ionic components.</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h1>Search Bar</h1>
+        <div
+          style="
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <ion-searchbar id="search"></ion-searchbar>
+          <ion-button id="find">Find!</ion-button>
+        </div>
+      </ion-label>
+    </ion-item>
+    <ion-list id="list"> </ion-list>
+  </body>
+</html>
